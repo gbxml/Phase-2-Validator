@@ -1,0 +1,50 @@
+﻿/*---- body ----*/
+body 
+{
+    padding-top: 70px;
+}
+
+/*---- header ----*/
+.hd-container
+{
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.4em;
+	background-color: rgba(255,255,255,0.8);
+	/* min-width: 300px; */
+	max-width: 900px;
+	margin: 10px auto 0 auto;
+	text-align: left;
+	position: relative;
+}
+
+#signin
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+.branding
+{
+    width: 980px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.content-box
+{
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+/*---- table ----*/
+.table td
+{
+    font-size: 12px;
+    text-align: center;
+}

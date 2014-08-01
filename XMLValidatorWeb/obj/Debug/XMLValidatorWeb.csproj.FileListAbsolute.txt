@@ -1,0 +1,9 @@
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\XMLValidatorWeb.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\XMLValidatorWeb.pdb
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\DOEgbxml.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\log4net.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\Newtonsoft.Json.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\VectorMath.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\bin\Newtonsoft.Json.xml
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\obj\Debug\XMLValidatorWeb.dll
+C:\Users\Chiensi\Documents\gbxml\XMLValidatorWeb\obj\Debug\XMLValidatorWeb.pdb
