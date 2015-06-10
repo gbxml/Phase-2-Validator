@@ -18,7 +18,7 @@
         <div class="navbar navbar-fixed-top navbar-default">
             <div class="container">
                 <a class="navbar-brand" href="http://gbxml.org">gbXML Validator 2.0</a>
-                <a class="btn btn-default navbar-btn pull-right" href="http://www.controlsestimate.com/Validator/Version1/Pages/TestPage.aspx">Version 1</a>
+                <a class="btn btn-default navbar-btn pull-right" href="http://www.controlsestimate.com/Validator/Version1/Pages/TestPage.aspx">Goto Version 1</a>
             </div>
         </div>
         <div class="hd-container">

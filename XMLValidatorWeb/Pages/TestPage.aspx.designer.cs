@@ -13,13 +13,13 @@ namespace XMLValidatorWeb.Pages {
     public partial class TestPage {
         
         /// <summary>
-        /// TestSummuryLabel control.
+        /// TestSummuryPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TestSummuryLabel;
+        protected global::System.Web.UI.WebControls.Panel TestSummuryPanel;
         
         /// <summary>
         /// VersionDropDownList control.
