@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
@@ -169,7 +170,6 @@
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Properties\PublishProfiles\GBXML Beta.pubxml" />
     <None Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="SupportFiles\XSD\GreenBuildingXML_Ver5.10.xsd">
       <SubType>Designer</SubType>
