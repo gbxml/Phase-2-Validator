@@ -15,19 +15,19 @@
     <div class="container well-lg">
         <div class="container">
             <div class="container well">
-                <asp:Label ID="TestSummuryLabel" runat="server" Text=""></asp:Label>
+                <asp:Panel ID="TestSummuryPanel" runat="server"></asp:Panel>
             </div>
             <div class="container well">
                 <div class="well-sm">
-                    <h3>Choose Report Schema:</h3>
+                    <h3>Choose gbXML Schema:</h3>
                     <select id="VersionDropDownList" runat="server" class="form-control">
-                        <option value="10" selected="selected">Green Building XML Version 5.10</option>
+                        <option value="10">Green Building XML Version 5.10</option>
                         <option value="11">Green Building XML Version 5.11</option>
-                        <option value="12">Green Building XML Version 5.12</option>
+                        <option value="12" selected="selected">Green Building XML Version 5.12</option>
                     </select>
-                </div>
+                </div> <!-- /Report Schema Selection Well -->
                 <div class="well-sm">
-                    <h3>Upload Your XML File Here:</h3> 
+                    <h3>Upload Your gbXML File Here:</h3> 
                     <div class="navbar">
                         <div class="navbar-brand pull-left">
                             <asp:FileUpload ID="FileUpload1" runat="server" CssClass="Fileupload" class="btn" />
@@ -45,7 +45,7 @@
                                 OnClick="importJSONButton_Click" Visible="false" />
                         </div>
                     </div>
-                </div>
+                </div> <!-- /File Upload Well -->
             </div>
             <div id="ResultsSections" runat="server" class="container well">
                 <div class="btn-group pull-right">
@@ -53,7 +53,7 @@
                         OnClick="DownloadLogButton_Click" Visible="False" />
                     <asp:Button class="btn" ID="PrintFriendlyButton" runat="server" Text="Print Friendly"
                         OnClick="PrintFriendlyButton_Click" Visible="False" />
-                </div>
+                </div> <!-- /Report Button Group -->
                 <div class="well-sm">
                     <asp:Label ID="ResultSummaryLabel" runat="server" Text=""></asp:Label>
                 </div>

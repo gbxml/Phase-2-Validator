@@ -19,9 +19,8 @@ namespace XMLValidatorWeb.Pages
         //define tolerances for the tests
         static double coordtol = DOEgbXMLBasics.Tolerances.coordToleranceIP;
         public List<DOEgbXMLPhase2Report> ReportList = new List<DOEgbXMLPhase2Report>();
-        public string output;
         public string log;
-        public string table;
+        public string table;  // TODO: Replace "table" string with outputs to a panel???
         string TestToRun = "GenericPhase2";
         DOEgbXMLTestCriteriaObject TestCriteria;
         DOEgbXMLTestDetail TestDetail;
@@ -32,7 +31,12 @@ namespace XMLValidatorWeb.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             ResultsSections.Visible = false;
-            TestSummuryLabel.Text = "Welcome to the newest gbXML Validator.  Last update July 31, 2014.  You may view the sourcecode on our github presence.  Search for 'gbxml' on github.  Upload your gbXML file, choose the schema, and click 'View Report' ";
+            TestSummuryPanel.Controls.Add(new LiteralControl("<h4>This validation website allows you to upload your own gbXML files, and it performs the following 3 levels of verification:</h4>"));
+            TestSummuryPanel.Controls.Add(new LiteralControl("<ol>"));
+            TestSummuryPanel.Controls.Add(new LiteralControl("<li>Level 1: Checks for a properly formed XML file</li>"));
+            TestSummuryPanel.Controls.Add(new LiteralControl("<li>Level 2: Checks for a properly formed gbXML file comparing it to the 5.10 and later schema versions</li>"));
+            TestSummuryPanel.Controls.Add(new LiteralControl("<li>Level 3: Checks for the 16 standard test cases</li>"));
+            TestSummuryPanel.Controls.Add(new LiteralControl("</ol>"));
         }
         protected void upLoadButton_Click1(object sender, EventArgs e)
         {
@@ -117,12 +121,15 @@ namespace XMLValidatorWeb.Pages
                         responseStream.Position = 0;
                         XmlReader xmlreader2 = XmlReader.Create(responseStream);
 
+                        //run through reports
                         ProcessValidXML(parser, xmlreader2);
 
                         //show summary table
-                        ResultSummaryLabel.Text = summaryTable;  
-                        //show test section table
+                        ResultSummaryLabel.Text = summaryTable;
+  
+                        //show test section table // TODO: Replace with a panel?
                         TestResultLabel.Text = table;
+                        
                         //store reportlist in session for TestDetailPage.
                         Session["reportList"] = ReportList;
  
@@ -686,7 +693,6 @@ namespace XMLValidatorWeb.Pages
             //Basic requirements check
 
             // Setup the results view for the log and web.
-            output = "";
             log = "";
             table += "<div class='well-lg'>" +
                     "<h3>" + "Test Sections" + "</h3>";
@@ -909,12 +915,6 @@ namespace XMLValidatorWeb.Pages
             {
                 title += " " + subType;
             }
-            output += "<h3>" + title + "</h3>";
-
-            //description
-            output += "<p>Explanation of Test: " + report.testSummary + "</p>";
-            log += "Explanation of Test: " + report.testSummary + System.Environment.NewLine;
-
             //message
             var passTest = report.TestPassedDict.Values;
             bool individualTestBool = true;
@@ -926,18 +926,20 @@ namespace XMLValidatorWeb.Pages
                     break;
                 }
             }
+
+            #region Create Log
+            //description
+            log += "Explanation of Test: " + report.testSummary + System.Environment.NewLine;
+
             if (report.passOrFail && individualTestBool)
             {
-                output += "<h4 class='text-success'>" + report.longMsg + "</h4>";
                 log += "Test has Passed" + System.Environment.NewLine;
             }
             else
             {
-                output += "<h4 class='text-error'>" + report.longMsg + "</h4>";
                 log += "Test has Failed" + System.Environment.NewLine;
                 overallPassTest = false;
             }
-
             log += "Explanation of What Happened: " + report.longMsg + System.Environment.NewLine;
 
             //message list, print out each message in the list if there are any
@@ -947,8 +949,7 @@ namespace XMLValidatorWeb.Pages
                 {
                     foreach (string finding in message.Value)
                     {
-                        output += "<p class='text-info'>" + message.Key + "</p>";
-                        log += message.Key + ": " + finding + System.Environment.NewLine;                   
+                        log += message.Key + ": " + finding + System.Environment.NewLine;
                     }
                 }
             }
@@ -956,12 +957,11 @@ namespace XMLValidatorWeb.Pages
             {
                 foreach (KeyValuePair<string, bool> pair in report.TestPassedDict)
                 {
-                    output += "<p class='text-info'>" + pair.Key + ": " + pair.Value + "</p>";
                     log += pair.Key + ": " + pair.Value + System.Environment.NewLine;
                 }
             }
-            output += "<br/>";
             log += System.Environment.NewLine;
+            #endregion Create Log
 
             //create table row
             if (createTable)
@@ -974,7 +974,7 @@ namespace XMLValidatorWeb.Pages
                     report.idList.Add("");
                 }
 
-                //for eachout put
+                //for each output
                 for (int i = 0; i < report.standResult.Count; i++)
                 {
                     bool sameString = false;

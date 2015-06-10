@@ -52,10 +52,7 @@
   <ItemGroup>
     <Reference Include="DOEgbxml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SupportFiles\DOEgbxml.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>SupportFiles\log4net.dll</HintPath>
+      <HintPath>Libraries\DOEgbxml.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
@@ -77,9 +74,8 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="VectorMath, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>SupportFiles\VectorMath.dll</HintPath>
+    <Reference Include="VectorMath">
+      <HintPath>Libraries\VectorMath.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
