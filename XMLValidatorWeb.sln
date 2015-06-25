@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLValidatorWeb", "XMLValidatorWeb\XMLValidatorWeb.csproj", "{D9E0A2E6-768A-4377-AF62-675D156F8813}"
 EndProject
 Global

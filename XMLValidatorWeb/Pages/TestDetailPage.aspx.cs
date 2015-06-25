@@ -113,14 +113,18 @@ namespace XMLValidatorWeb
                             string currentBodyOutput = "<div>";
                             foreach (string finding in message.Value)
                             {
-                                if (finding.Substring(0, 5) == "PASS:" || finding.Substring(0, 14) == "PERFECT MATCH:")
+                                if (finding.Substring(0, 5) == "PASS:" || finding.Substring(0, 14) == "PERFECT MATCH:" || finding.Substring(0,12) =="TEST PASSED:")
                                 {
                                     currentBodyOutput += "<p class='text-success'>" + finding + "</p>";
                                 }
-                                else
+                                else if (finding.Substring(0, 5) == "FAIL:" || finding.Substring(0,12) == "TEST FAILED:")
                                 {
                                     currentBodyOutput += "<p class='text-danger'>" + finding + "</p>";
                                     panelError = true;
+                                }
+                                else
+                                {
+                                    currentBodyOutput += "<p class='text-info'>" + finding + "</p>";
                                 }
                             } 
                             currentBodyOutput += "</div>";

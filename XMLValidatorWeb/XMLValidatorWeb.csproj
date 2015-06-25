@@ -139,6 +139,7 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Model\Validator.cs" />
     <Compile Include="Pages\PrintFriendlyTablePage.aspx.cs">
       <DependentUpon>PrintFriendlyTablePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,7 +174,8 @@
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Properties\PublishProfiles\GBXML Beta.pubxml" />
+    <None Include="Properties\PublishProfiles\Live.pubxml" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
     <None Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="SupportFiles\XSD\GreenBuildingXML_Ver5.10.xsd">
       <SubType>Designer</SubType>

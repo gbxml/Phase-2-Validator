@@ -13,13 +13,13 @@ namespace XMLValidatorWeb.Pages {
     public partial class TestPage {
         
         /// <summary>
-        /// TestSummuryLabel control.
+        /// TestSummuryPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TestSummuryLabel;
+        protected global::System.Web.UI.WebControls.Panel TestSummuryPanel;
         
         /// <summary>
         /// VersionDropDownList control.
@@ -49,42 +49,6 @@ namespace XMLValidatorWeb.Pages {
         protected global::System.Web.UI.WebControls.Button upLoadButton;
         
         /// <summary>
-        /// downloadXMLButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downloadXMLButton;
-        
-        /// <summary>
-        /// downloadJSONButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downloadJSONButton;
-        
-        /// <summary>
-        /// importXMLButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button importXMLButton;
-        
-        /// <summary>
-        /// importJSONButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button importJSONButton;
-        
-        /// <summary>
         /// ResultsSections control.
         /// </summary>
         /// <remarks>
@@ -103,13 +67,13 @@ namespace XMLValidatorWeb.Pages {
         protected global::System.Web.UI.WebControls.Button DownloadLogButton;
         
         /// <summary>
-        /// PrintFriendlyButton control.
+        /// PrintFriendly control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PrintFriendlyButton;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor PrintFriendly;
         
         /// <summary>
         /// ResultSummaryLabel control.
@@ -121,13 +85,13 @@ namespace XMLValidatorWeb.Pages {
         protected global::System.Web.UI.WebControls.Label ResultSummaryLabel;
         
         /// <summary>
-        /// TestResultLabel control.
+        /// TestResultPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TestResultLabel;
+        protected global::System.Web.UI.WebControls.Panel TestResultPanel;
         
         /// <summary>
         /// LogLabel control.
